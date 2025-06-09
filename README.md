@@ -97,12 +97,55 @@ python main.py
 
 ---
 
-## ⚡ Full Features
-
-✅ Listen to any number of Telegram channels
-✅ Automatically detect the source language and its confidence
-✅ Translate to English (LibreTranslate)
-✅ Forward everything to a target Telegram channel
-✅ Fully self-hosted translation (no external API costs!)
+Great point! Let’s add a section to the README about **stopping the LibreTranslate Docker container** to free up RAM and system resources when you’re not using it.
 
 ---
+
+Here’s the updated section to add to your **README.md**:
+
+---
+
+### 🛑 Stopping LibreTranslate to save resources
+
+LibreTranslate runs in a Docker container, and it can use a lot of RAM (because of language models).
+
+✅ To **stop LibreTranslate** and free up resources:
+
+1️⃣ List running containers:
+
+```bash
+docker ps
+```
+
+You’ll see something like:
+
+```
+CONTAINER ID   IMAGE                           PORTS                    NAMES
+abc123456789   libretranslate/libretranslate   0.0.0.0:5555->5000/tcp   friendly_cartwright
+```
+
+2️⃣ Stop the container:
+
+```bash
+docker stop abc123456789
+```
+
+(replace `abc123456789` with your actual container ID)
+
+---
+
+### 📝 Notes
+
+* Once stopped, LibreTranslate **won’t be available** for translations.
+* You can **restart it anytime** by re-running:
+
+  ```bash
+  docker run -it -p 5555:5000 libretranslate/libretranslate
+  ```
+* Or use Docker Desktop’s GUI to stop/start containers!
+
+---
+
+✅ This ensures your computer isn’t using extra RAM when you’re not actively translating.
+
+
