@@ -1,4 +1,3 @@
-````markdown
 # Telegram Translator Bot 🤖
 
 This is a Python application that listens to specific Telegram channels, auto-detects the language of incoming messages, translates them to English using a **locally-hosted LibreTranslate instance**, and forwards the translated message (with metadata) to a **target channel**.
