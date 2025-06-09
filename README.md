@@ -9,8 +9,7 @@ This is a Python application that listens to specific Telegram channels, auto-de
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/telegram-translator-bot.git
-cd telegram-translator-bot
+git clone https://github.com/chrispyroberts/TelegramScanner.git
 ````
 
 ---
